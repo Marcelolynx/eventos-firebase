@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import './home.css';
-import firebase from '../../config/firebase';
-import 'firebase/auth';
+import './home.css'; 
 import {Link} from 'react-router-dom';
 import Navbar from '../../components/navbar/header'
-
+import { useSelector} from 'react-redux';
 
 function Home() {
   return(  
-    <Navbar/>
+    <>
+      <Navbar/>
+       <h1>{useSelector(state => state.usuarioEmail) }</h1>
+    </>
  )
 }
 

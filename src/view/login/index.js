@@ -2,33 +2,41 @@ import React, { useState } from 'react';
 import './login.css';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
-import {Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Navbar from '../../components/navbar/header';
+
+import { useSelector, useDispatch } from 'react-redux';
+
 
 function Login () {   
  
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+  const [msgTipo, setMsgTipo] = useState();
+  const dispatch = useDispatch();
 
   function logar() {
     firebase.auth()
             .signInWithEmailAndPassword(email, senha)
             .then(resultado => {
                 setMsgTipo('sucesso');
+                dispatch({ type: 'LOG_IN', usuarioEmail: email});
             }).catch(erro => {
               setMsgTipo('erro');
             });
   }
 
-  const [email, setEmail] = useState();
-  const [senha, setSenha] = useState();
-  const [msgTipo, setMsgTipo] = useState();
-
   return(
     <>
     <Navbar/>
     <div className="login-content d-flex justify-content-center">
+    
+        {useSelector(state => state.usuarioLogado) > 0 ? <Redirect to='/' /> : null }
+     
+      
       <form className="form-signin mx-auto">
         <div className="text-center mb-4">
-        <img className="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72" />
+        <img className="mb-4" src="assets/paiva-odontologia.png" alt="" width="72" height="72" />
         <h1 className="h3 mb-3 font-weight-normal text-white font-weight-bold">Login</h1>
         </div>
 

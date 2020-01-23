@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './usuario.css';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
-import Navbar from '../../components/navbar/header'
+import Navbar from '../../components/navbar/header';
 
 function Usuario() {
 

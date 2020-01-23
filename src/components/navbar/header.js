@@ -10,7 +10,7 @@ function Navbar() {
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
       <a className="navbar-brand font-weight-bold" href="/">Paiva Academics</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav">
-        <span className="navbar-toggler-icon"></span>
+      <i class="fas fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
