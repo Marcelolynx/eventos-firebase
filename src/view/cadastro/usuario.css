@@ -1,7 +1,24 @@
+.form-cadastro {
+  width: 100%;
+  padding: 15%;
+  margin: auto;
+  background-color:  #2B57C9;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+}
+
 .form-login {
   max-width: 650px;
 }
 
 .btn-cadastro {
   background-color: #30506B;
+}
+
+.btn {
+  background-color: yellow;
+  color: #2B57C9;
 }

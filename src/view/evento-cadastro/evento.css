@@ -1,0 +1,16 @@
+.content {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 960px;
+  align-content: center;
+}
+
+.btn-cadastro {
+  background-color: #614EA6;
+  color: #fff;
+}
+
+.btn-cadastro:hover {
+  background-color: #F21667;
+  color: #fff;
+}

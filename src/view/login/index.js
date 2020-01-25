@@ -3,7 +3,8 @@ import './login.css';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
 import { Link, Redirect } from 'react-router-dom';
-import Navbar from '../../components/navbar/header';
+import Navbar from '../../components/navbar/navbar';
+import logo from '../assets/paiva-odontologia.png';
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -20,7 +21,9 @@ function Login () {
             .signInWithEmailAndPassword(email, senha)
             .then(resultado => {
                 setMsgTipo('sucesso');
-                dispatch({ type: 'LOG_IN', usuarioEmail: email});
+                setTimeout(() => {
+                  dispatch({ type: 'LOG_IN', usuarioEmail: email});
+                },2000);
             }).catch(erro => {
               setMsgTipo('erro');
             });
@@ -36,7 +39,7 @@ function Login () {
       
       <form className="form-signin mx-auto">
         <div className="text-center mb-4">
-        <img className="mb-4" src="assets/paiva-odontologia.png" alt="" width="72" height="72" />
+        <img className="mb-4" src={logo} alt="" width="90" height="68" />
         <h1 className="h3 mb-3 font-weight-normal text-white font-weight-bold">Login</h1>
         </div>
 
@@ -53,7 +56,7 @@ function Login () {
 
 
         <div className="opcoes-login mt-5 text-center">
-          <a href="/"  className="mx-2">Esqueci a senha</a>
+          <Link to="/recuperar-senha"  className="mx-2">Esqueci a senha</Link>
           <span>&#9733;</span>
           <Link to="cadastro/usuario" className="mx-2">Cadastrar</Link>
         </div>
