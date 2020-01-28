@@ -6,6 +6,8 @@ import firebase from '../../config/firebase';
 
 function Evento() {
   
+  let prazoResposta = new Date();
+  
 
   const [msgTipo, setMsgTipo] = useState();
   const [numero, setNumero] = useState();
@@ -44,6 +46,11 @@ function Evento() {
       setMsgTipo('Não foi possível fazer o upload do arquivo!');
     });
   })
+}
+
+function Alerta() {
+  if(prazoResposta < (dataResposta - 10))
+  alert("Prazo de resposta apertado")
 }
 
   return(  

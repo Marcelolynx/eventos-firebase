@@ -2,19 +2,19 @@
   width: 100%;
   padding: 15%;
   margin: auto;
-  background-color:  #2B57C9;
+  background-color:  #614EA6;
 }
 
 h1 {
   color: white;
   font-weight: 400;
 }
-
+ 
 
 .btn-login {
   height: 50px;
   width: 380px;
-  background-color: yellow;
+  background-color: #fff;
   color: #30506B;
   font-weight: 600;
   font-size: 22px;

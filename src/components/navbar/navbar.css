@@ -1,6 +1,9 @@
-.navbar {
-  background-color: #ffffff;
-  height: 90px;
+ .navbar-brand {
+  margin-left: 50px;
+  margin-top: 25px;
+  font-size: 2.2rem;
+  color: aliceblue;
+  
 }
 
 .nav-item a:hover {

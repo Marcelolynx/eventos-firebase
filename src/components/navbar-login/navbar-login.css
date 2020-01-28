@@ -1,0 +1,26 @@
+.navbar-brand {
+  margin-left: 50px;
+  margin-top: 25px;
+  font-size: 2.2rem;
+  color: aliceblue;
+  
+}
+
+.navbar-nav {
+  margin-right: 50px;
+}
+
+.navbar-nav {
+  color: aliceblue;
+}
+
+.navbar-login {
+  padding-left: 20px;
+  background-color: #614EA6;
+  height: 90px;
+  color: aliceblue;
+}
+
+.nav-item .navbar-nav a:hover {
+  color: purple;
+}
