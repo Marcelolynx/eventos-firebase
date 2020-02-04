@@ -58,17 +58,25 @@ function Alerta() {
       <Navbar/>
        <div className="content col-12">
          <div className="row">
-           <h3 className="mx-auto font-weight-bold">Cadastro de Offício</h3>
+           <h3 className="mx-auto font-weight-bold">Cadastro de Offício/CI</h3>
          </div>
 
          <form action="">
          <div className="form-group row">
+           <div className="form-group col-2">
+             <label>Tipo de Doc.</label>
+             <select onChange={(e) => setOrigem(e.target.value)} className="form-control">
+                <option disable selected value>-- Selecione --</option>
+                <option value="">Officio </option>
+                <option value="">CI</option> 
+              </select>
+           </div>
            <div className="form-group col-3">
              <label>Número</label>
              <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
            </div>
-           <div className="form-group col-9">
-             <label>Título</label>
+           <div className="form-group col-7">
+             <label>Assunto</label>
              <input onChange={(e) => setTitulo(e.target.value)}  type="text" className="form-control"/>
            </div>
           </div>

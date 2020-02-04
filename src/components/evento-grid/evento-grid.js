@@ -24,29 +24,29 @@ function EventoGrid() {
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <td>0912/2019</td>
+      <td>Requisição de materiais</td>
+      <td>SUS</td>
+      <td>20/12/2019</td>
+      <td>20/02/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
+      <td>1212/2019</td>
+      <td>Contrato de manutenção</td>
+      <td>SUS</td>
+      <td>20/12/2019</td>
+      <td>20/02/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
+      <td>33912/2019</td>
+      <td>Compra de materiais</td>
+      <td>PMCG</td>
+      <td>20/12/2019</td>
+      <td>20/02/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
   </tbody>
