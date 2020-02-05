@@ -38,7 +38,7 @@ function Login () {
       
       <form className="form-signin mx-auto">
         <div className="text-center mb-4">
-        <img className="mb-4"   alt="" width="90" height="68" />
+          
         <h1 className="h3 mb-3 font-weight-normal text-white font-weight-bold">Login</h1>
         </div>
 
@@ -55,9 +55,7 @@ function Login () {
 
 
         <div className="opcoes-login mt-5 text-center">
-          <Link to="/recuperar-senha"  className="mx-2">Esqueci a senha</Link>
-          <span>&#9733;</span>
-          <Link to="cadastro/usuario" className="mx-2">Cadastrar</Link>
+          <Link to="/recuperar-senha"  className="mx-2">Esqueci a senha</Link>   
         </div>
       </form>
     </div>

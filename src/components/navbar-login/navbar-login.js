@@ -13,7 +13,7 @@ function NavbarLogin() {
     <>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
        
-          <a className="navbar-brand font-weight-bold" href="/">Reminder</a>
+          <a className="navbar-brand font-weight-bold" href="/">FinTech</a>
           
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav">
           <i class="fas fa-bars"></i>
