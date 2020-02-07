@@ -58,7 +58,7 @@ function Alerta() {
       <Navbar/>
        <div className="content col-12">
          <div className="row">
-           <h3 className="mx-auto font-weight-bold">Cadastro de Offício/CI</h3>
+           <h3 className="mx-auto font-weight-bold">Cadastro Recebimento</h3>
          </div>
 
          <form action="">

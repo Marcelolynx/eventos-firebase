@@ -7,45 +7,46 @@ function EventoGrid() {
   return(
     <>
     <div className="container">
-    <div className="mb-3"><strong>Lista de Ofícios</strong></div>
+    <div className="mb-3"><strong>Lista de Recebimentos</strong></div>
 
     <table class="table table-hover table-responsive-md">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Código</th>
-      <th scope="col">Titulo</th>
-      <th scope="col">Requisitante</th>
-      <th scope="col">Data Recebido</th>
-      <th scope="col">Prazo Resposta</th>
-      <th scope="col">Detalhes</th>
+      <th scope="col">Nome</th>
+      <th scope="col">telefone</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Data Crédito</th>
+      <th scope="col">Num parcelas</th> 
+      <th scope="col">Data Recebimento</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>0912/2019</td>
-      <td>Requisição de materiais</td>
-      <td>SUS</td>
+      <td>Carlos Medeiros</td>
+      <td>67 99915-9900</td>
+      <td>Rua dos Medeiros 99</td>
       <td>20/12/2019</td>
-      <td>20/02/2020</td>
+      <td>20/01/2020</td>
+      <td>20/01/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>1212/2019</td>
-      <td>Contrato de manutenção</td>
-      <td>SUS</td>
-      <td>20/12/2019</td>
-      <td>20/02/2020</td>
+      <td>Everaldo Gimenes</td>
+      <td>67 99232-9090</td>
+      <td>Rua do Calote, 171</td>
+      <td>24/12/2019</td>
+      <td>05/01/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>33912/2019</td>
-      <td>Compra de materiais</td>
-      <td>PMCG</td>
-      <td>20/12/2019</td>
+      <td>Valeria Marques</td>
+      <td>67 9669-0169</td>
+      <td>Av da Passarela, 760</td>
+      <td>24/12/2019</td>
       <td>20/02/2020</td>
       <td><a className="btn btn-outline-secondary btn-small">Detalhes</a></td>
     </tr>
