@@ -6,7 +6,7 @@ import firebase from '../../config/firebase';
 
 function Evento() {
   
-  let prazoResposta = new Date();
+  let prazoResposta = () => (new Date.now());
   
 
   const [msgTipo, setMsgTipo] = useState();
@@ -64,56 +64,41 @@ function Alerta() {
          <form action="">
          <div className="form-group row">
            <div className="form-group col-2">
-             <label>Tipo de Doc.</label>
+             <label>TX de Retorno</label>
              <select onChange={(e) => setOrigem(e.target.value)} className="form-control">
                 <option disable selected value>-- Selecione --</option>
-                <option value="">Officio </option>
-                <option value="">CI</option> 
+                <option value="">10% </option>
+                <option value="">15%</option> 
+                <option value="">25%</option> 
+                <option value="">30%</option> 
+                <option value="">35%</option> 
+                <option value="">40%</option> 
+                <option value="">45%</option> 
+                <option value="">50%</option> 
               </select>
            </div>
            <div className="form-group col-3">
-             <label>Número</label>
+             <label>Valor</label>
              <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
            </div>
            <div className="form-group col-7">
-             <label>Assunto</label>
+             <label>Nome cliente</label>
              <input onChange={(e) => setTitulo(e.target.value)}  type="text" className="form-control"/>
            </div>
           </div>
           <div className="form-group row col-12">
             <div className='form-group col-6'>
-              <label>Origem solicitante </label>
+              <label>Período de recebimento </label>
               <select onChange={(e) => setOrigem(e.target.value)} className="form-control">
                 <option disable selected value>-- Selecione --</option>
-                <option value="">Officio SUS</option>
-                <option value="">Officio Convênio</option>
-                <option value="">Officio Prefeitura</option>
-                <option value="">Officio Governo</option>
+                <option value="">Semanal</option>
+                <option value="">Quinzenal</option>
+                <option value="">Mensal</option> 
               </select>
-            </div>
-          
-          
-            
+            </div>  
               <div className="form-group col-6">
                 <label>Data da solicitação</label>
                 <input onChange={(e) => setDataRecebido(e.target.value)} type="date" className="form-control"/>
-              </div>
-
-              <div className='form-group col-6'>
-              <label>Destino solicitado </label>
-              <select onChange={(e) => setDestino(e.target.value)} className="form-control">
-                <option disable selected value>-- Selecione --</option>
-                <option value="">Officio SUS</option>
-                <option value="">Officio Convênio</option>
-                <option value="">Officio Prefeitura</option>
-                <option value="">Officio Governo</option>
-              </select>
-            </div>
-          
-               
-              <div className="form-group col-6">
-                <label>Data limite para resposta</label>
-                <input onChange={(e) => setDataResposta(e.target.value)} type="date" className="form-control"/>
               </div>
               
           </div>
@@ -122,10 +107,7 @@ function Alerta() {
              <label>Descrição da solicitação</label>
              <textarea onChange={(e) => setDescricao(e.target.value)} type="text" className="form-control" rows="5" />
            </div>
-           <div className="form-group col-6">
-                <label>Upload do documento</label>
-                <input onChange={(e) => setArquivo(e.target.files[0])} type="file" className="form-control"/>
-           </div>
+          
 
            <button onClick={cadastrar} className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro" type="button">Salvar</button>
 
