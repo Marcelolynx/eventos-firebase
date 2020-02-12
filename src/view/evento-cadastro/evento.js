@@ -63,6 +63,10 @@ function Alerta() {
 
          <form action="">
          <div className="form-group row">
+         <div className="form-group col-7">
+             <label>Nome cliente</label>
+             <input onChange={(e) => setTitulo(e.target.value)}  type="text" className="form-control"/>
+           </div>
            <div className="form-group col-2">
              <label>TX de Retorno</label>
              <select onChange={(e) => setOrigem(e.target.value)} className="form-control">
@@ -77,16 +81,39 @@ function Alerta() {
                 <option value="">50%</option> 
               </select>
            </div>
+          
+        
            <div className="form-group col-3">
              <label>Valor</label>
              <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
            </div>
-           <div className="form-group col-7">
-             <label>Nome cliente</label>
-             <input onChange={(e) => setTitulo(e.target.value)}  type="text" className="form-control"/>
-           </div>
           </div>
-          <div className="form-group row col-12">
+           
+             
+            <div className="form-group row">
+             <label>Endereço</label>
+             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+           </div>
+           <div className="form-group col-2">
+             <label>numero</label>
+             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+           </div>
+           <div className="form-group col-3">
+             <label>Bairro</label>
+             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+           </div>
+           <div className="form-group col-3">
+             <label>Cidade:</label>
+             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+           </div>
+           <div className="form-group col-3">
+             <label>CEP:</label>
+             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+           </div>
+            
+ 
+           <div className="form-group row">
+          <div className="form-group">
             <div className='form-group col-6'>
               <label>Período de recebimento </label>
               <select onChange={(e) => setOrigem(e.target.value)} className="form-control">
@@ -101,6 +128,7 @@ function Alerta() {
                 <input onChange={(e) => setDataRecebido(e.target.value)} type="date" className="form-control"/>
               </div>
               
+          </div>
           </div>
 
            <div className="form-group">
