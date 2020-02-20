@@ -10,14 +10,15 @@ function Evento() {
   
 
   const [msgTipo, setMsgTipo] = useState();
-  const [numero, setNumero] = useState();
-  const [titulo, setTitulo] = useState();
-  const [origem, setOrigem] = useState();
-  const [descricao, setDescricao] = useState();
-  const [dataRecebido, setDataRecebido] = useState();
-  const [destino, setDestino] = useState();
-  const [dataResposta, setDataResposta] = useState();
-  const [arquivo, setArquivo] = useState(); 
+  const [Nome, setNome] = useState();
+  const [rg, setRg] = useState();
+  const [cpf, setCpf] = useState(); 
+  const [telefone, seTelefone] = useState();
+  const [celular, setCelular] = useState();
+  const [endereco, setDescricao] = useState();
+  const [bairro, setDataRecebido] = useState();
+  const [cidade, setDestino] = useState();
+  const [cep, setDataResposta] = useState();
   const usuarioEmail = (useSelector(state => state.usuarioEmail));
 
   const storage = firebase.storage();
@@ -29,15 +30,15 @@ function Evento() {
 
     storage.ref(`documentos/${arquivo.name}`).put(arquivo).then(() => {
       db.collection('reminder').add({
-        numero: numero,
-        titulo: titulo,
-        origem: origem,
-        descricao: descricao,
-        dataRecebido: dataRecebido,
-        destino: destino,
-        dataResposta: dataResposta,
-        arquivo: arquivo.name,
-        usuario: usuarioEmail,
+        nome: nome,
+        rg: rg,
+        cpf: cpf,
+        telefone: telefone,
+        celular: celular,
+        endereco: endereco,
+        bairro: bairro,
+        cidade: cidade.name,
+        cep: cep,
         criacao: new Date()
         
       }).then(() => {
@@ -48,10 +49,7 @@ function Evento() {
   })
 }
 
-function Alerta() {
-  if(prazoResposta < (dataResposta - 10))
-  alert("Prazo de resposta apertado")
-}
+ 
 
   return(  
     <>
@@ -65,7 +63,7 @@ function Alerta() {
          <div className="form-group row">
          <div className="form-group col-7">
              <label>Nome cliente</label>
-             <input onChange={(e) => setTitulo(e.target.value)}  type="text" className="form-control"/>
+             <input onChange={(e) => setNome(e.target.value)}  type="text" className="form-control"/>
            </div>
            <div className="form-group col-2">
              <label>TX de Retorno</label>
@@ -85,18 +83,18 @@ function Alerta() {
         
            <div className="form-group col-3">
              <label>Valor</label>
-             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+             <input onChange={(e) => setNome(e.target.value)} type="text" className="form-control"/>
            </div>
           </div>
            
              
             <div className="form-group row">
              <label>Endereço</label>
-             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+             <input onChange={(e) => setRg(e.target.value)} type="text" className="form-control"/>
            </div>
            <div className="form-group col-2">
              <label>numero</label>
-             <input onChange={(e) => setNumero(e.target.value)} type="text" className="form-control"/>
+             <input onChange={(e) => setCpf(e.target.value)} type="text" className="form-control"/>
            </div>
            <div className="form-group col-3">
              <label>Bairro</label>
